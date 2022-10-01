@@ -20,9 +20,14 @@ def reading_file(file):
     with open(file) as f:
         data = json.load(f)         #json нужен для декодирования символов кириллицы
 
+    k = 0
     data = data["transactions"]     #исходные данные заключены во внешний словарь, который требуется очистить
     for item in data:
-        data[item] = clear_transactions(data[item], False)
+        data[item] = clear_transactions(data[item], True)
+        k += 1
+        print()
+        if k == 15:
+            break
 
 
 
