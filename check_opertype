@@ -1,0 +1,9 @@
+
+def check_opertype(main_dict):
+    if main_dict.setdefault('oper_type') == 'Пополнение':
+        return True
+    else:
+        return False
+
+    #print(check_opertype(main_dict.setdefault(dic)))        ПРИМЕР ВЫЗОВА ФУНКЦИИ
+
